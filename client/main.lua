@@ -5,6 +5,7 @@ local canTake = false
 local meltTime
 local meltedItem = {}
 
+--[[ Vitto
 CreateThread(function()
     for _, value in pairs(Config.PawnLocation) do
         local blip = AddBlipForCoord(value.coords.x, value.coords.y, value.coords.z)
@@ -18,6 +19,7 @@ CreateThread(function()
         EndTextCommandSetBlipName(blip)
     end
 end)
+--]]
 
 CreateThread(function()
     if Config.UseTarget then
